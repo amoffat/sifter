@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sifter</string>
+    <string name="action_settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="capture_instructions">Capture</string>
+    <string name="capture">Scan!</string>
+    <string name="scanning">Scanning...</string>
+    <string name="title_activity_match_results">MatchResults</string>
+    <string name="open_design">Open Design</string>
+    <string name="artist_profile">Artist Profile</string>
+
+</resources>

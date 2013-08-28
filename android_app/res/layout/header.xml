@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:gravity="left"
+    android:padding="8dp"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/threadless_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/threadless_black"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="3dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/sifter_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIFTER"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/sifter_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/sifter_logo"
+            android:layout_alignBottom="@+id/sifter_logo"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/sifter_logo"
+            android:gravity="center_vertical"
+            android:text="v0.1"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

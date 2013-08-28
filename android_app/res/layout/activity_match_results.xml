@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stripes_repeat"
+    tools:context=".MatchResults" >
+
+    <include layout="@layout/header_bg" />
+
+    <include layout="@layout/header" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_bg"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:id="@+id/agwefawe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp" >
+
+        <Button
+            android:id="@+id/open_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/artist_profile"
+            android:background="@drawable/button_states_blue"
+            android:text="@string/open_design" />
+
+        <Button
+            android:id="@+id/artist_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/button_states_action"
+            android:text="@string/artist_profile" />
+
+        <TextView
+            android:id="@+id/match_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KILL MONOTONY"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/match_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/match_title"
+            android:layout_below="@+id/match_title"
+            android:text="by Enkel Dika"
+            android:textSize="13dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

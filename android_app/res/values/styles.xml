@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="ThreadlessBase" parent="android:Theme.Holo">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="button" parent="@style/Threadless">
+        <item name="android:background">@drawable/button_states_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingBottom">15sp</item>
+        <item name="android:paddingLeft">45dp</item>
+        <item name="android:paddingRight">45dp</item>
+        <item name="android:paddingTop">15sp</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="Threadless" parent="ThreadlessBase">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:buttonStyle">@style/button</item>
+    </style>
+
+    <style name="ThreadlessFullscreen" parent="android:Theme.Holo.NoActionBar.Fullscreen">
+        <item name="android:buttonStyle">@style/button</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>
