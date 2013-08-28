@@ -39,10 +39,14 @@ public class MainActivity extends BaseActivity implements PictureCallback {
 
     private SifterCamera cameraPreview;
     private Button shutter;
-    private MediaPlayer shutterSound; 
-    private String serverHostname = "192.168.1.133";
-    //private String serverHostname = "sifter.threadless.com";
-    private int serverPort = 8080;
+    private MediaPlayer shutterSound;
+    
+    // local sifter engine, for testing
+    //private String serverHostname = "192.168.1.133";
+    //private int serverPort = 8080;
+    
+    private String serverHostname = "sifter.threadless.com";
+    private int serverPort = 80;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
