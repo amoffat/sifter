@@ -96,15 +96,22 @@ public class MainActivity extends BaseActivity implements PictureCallback {
         display.getSize(size);
 
         /*
+         * these two values were added much later.  the original version of the app was designed
+         * for a galaxy s3, and so the coordinates that follow were based off of the s3's camera
+         * size.  these normalize values make the positioning camera-resolution independent
+         */
+        float normalizeX = (float) (720.0 / original.getHeight());
+        float normalizeY = (float) (1280.0 / original.getWidth());
+
+        /*
          * these magic numbers correspond to the subsection of the image that
          * contains the majority of the shirt design that we want to send off to
          * scanning. they are width and height independent
          */
-        int upperLeftX = (int)(teeImage.getWidth() * 0.2325) + location[0];
-        int upperLeftY = (int)(teeImage.getHeight() * 0.10269576379974327)
-            + location[1];
-        int width = (int)(teeImage.getWidth() * 0.5575);
-        int height = (int)(teeImage.getHeight() * 0.8356867779204108);
+        int upperLeftX = (int)((teeImage.getWidth() * normalizeX) * 0.2325) + location[0];
+        int upperLeftY = (int)((teeImage.getHeight() * normalizeY) * 0.10269576379974327) + location[1];
+        int width = (int)(teeImage.getWidth() * normalizeX * 0.5575);
+        int height = (int)(teeImage.getHeight() * normalizeY * 0.8356867779204108);
 
         float scaleBy = 1.0f;
         if (width > 300) {
@@ -122,7 +129,7 @@ public class MainActivity extends BaseActivity implements PictureCallback {
         Matrix translateMat = new Matrix();
         float scale = ((float)teeMask.getWidth()) / ((float)rotated.getWidth());
         translateMat.postScale(scale, scale);
-        translateMat.postTranslate(-location[0] * scale, -location[1] * scale);
+        translateMat.postTranslate(-location[0] * scale * normalizeX, (-upperLeftY * scale) * normalizeX);
 
         final Canvas canvas = new Canvas();
         canvas.setBitmap(mutableMask);
