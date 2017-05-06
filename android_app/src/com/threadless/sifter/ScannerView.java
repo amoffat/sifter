@@ -27,7 +27,7 @@ public class ScannerView extends View {
     /*
      * how many seconds a full top-to-bottom scan takes
      */
-    private float scanRate = 1.75f;
+    private float scanRate = 2.0f;
     private float timestep = 1.0f / 30.0f;
     private int lastPosition = 0;
     private float strokeWidth = 1.0f;
